@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  border: 2px solid black;
+  margin: 10px;
+}
+
+header {
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Story Script", sans-serif;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo-image h3 {
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-bar a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-bar li {
+  position: relative;
+  margin-right: 15px;
+}
+
+.nav-bar li::after {
+  content: "/";
+  position: absolute;
+  right: -20px;
+  color: black;
+}
+
+/* το τελευταίο item δεν έχει γραμμή */
+.nav-bar li:last-child::after {
+  content: "";
+}
+
+.intro {
+  text-align: center;
+  margin: 70px;
+}
+
+.intro h1 {
+  font-size: 3rem;
+}
+
+.intro p {
+  color: grey;
+  padding: 10px;
+}
+
+main {
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: row;
+}
+
+.projects {
+  border-right: 2px solid black;
+  width: 30%;
+}
+
+.projects h2 {
+  padding: 20px;
+}
+
+.projects ul {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects li {
+  padding: 10px;
+  padding-left: 20px;
+  border-bottom: 1px solid black; /* οριζόντια γραμμή */
+}
+
+/* αφαιρεί τη γραμμή από το τελευταίο item */
+.projects :last-child {
+  border-bottom: none;
+}
+
+.work-experience {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.work-experience h2 {
+  padding: 20px 20px 0px 20px;
+}
+
+.work-experience article + article {
+  border-top: 2px solid black;
+}
+
+.work-experience article {
+  padding: 20px;
+  height: 50%;
+}
+
+.work-experience p {
+  padding: 10px 0;
+}
+
+.work-experience a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.education {
+  padding: 20px;
+  border-left: 2px solid black;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.education p {
+  padding: 10px 0;
+}
+
+.education ul {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+blockquote {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 15%;
+}
+blockquote p {
+  margin: 15px;
+}
+
+blockquote :nth-child(2) {
+  color: gray;
+}
+
+.copy p {
+  font-family: "Story Script", sans-serif;
+  padding: 100px;
+  text-align: center;
+}
+
+/* contact styles*/
+.contact {
+  padding: 20px;
+}
+/* articles styles*/
+
+
+
+/* articles styles*/
+
+
+
+
+
+/* Responsive για οθόνες <= 600px */
+@media (max-width: 600px) {
+  body {
+    margin: 5px; /* μικρότερο περιθώριο */
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  .logo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-image {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-bar ul {
+    gap: 5px;
+  }
+
+  .nav-bar li {
+    margin-left: 10px;
+  }
+  .intro {
+    margin: 30px 10px;
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .projects,
+  .work-experience,
+  .education {
+    width: 100%;
+    border: none;
+    text-align: center;
+  }
+
+  .projects h2 {
+    padding: 10px;
+    border-bottom: 2px solid black;
+  }
+
+  .projects ul {
+    background-color: #dddbdb;
+  }
+
+  .work-experience h2 {
+    padding: 10px;
+    border-bottom: 2px solid black;
+  }
+
+  .projects {
+    border-right: none;
+    border-bottom: 2px solid black; /* διαχωριστική γραμμή κάτω */
+  }
+
+  .education {
+    border-left: none;
+    border-top: 2px solid black;
+  }
+
+  .education p {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .work-experience article {
+    text-align: left;
+    height: auto;
+    border-top: none;
+    background-color: #dddbdb;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .reviews {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  blockquote {
+    max-width: 90%;
+    margin: 10px auto;
+  }
+
+  .copy p {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+}
